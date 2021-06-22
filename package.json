@@ -1,5 +1,5 @@
 {
-  "name": "pm2",
+  "name": "@socket.io/pm2",
   "preferGlobal": true,
   "version": "6.0.8",
   "engines": {
@@ -172,6 +172,8 @@
     "@pm2/js-api": "~0.8.0",
     "@pm2/io": "~6.1.0",
     "@pm2/pm2-version-check": "latest",
+    "@socket.io/cluster-adapter": "^0.1.0",
+    "@socket.io/sticky": "^1.0.0",
     "ansis": "4.0.0-node10",
     "async": "~3.2.6",
     "blessed": "0.1.81",
