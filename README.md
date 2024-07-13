@@ -1,8 +1,19 @@
 <div align="center">
-  <br/>
-  <a href="http://pm2.keymetrics.io/" title="PM2 Keymetrics link">
-    <img width=710px src="https://raw.githubusercontent.com/Unitech/pm2/master/pres/pm2-v4.png" alt="pm2 logo">
-  </a>
+ <br/>
+<picture>
+  <source
+    srcset="https://raw.githubusercontent.com/Unitech/pm2/master/pres/pm2-v4.png"
+    width=710px
+    media="(prefers-color-scheme: light)"
+  />
+  <source
+    srcset="https://raw.githubusercontent.com/Unitech/pm2/development/pres/pm2-v4-dark-mode.png"
+    width=710px
+    media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://raw.githubusercontent.com/Unitech/pm2/master/pres/pm2-v4.png" />
+</picture>
+
   <br/>
 <br/>
 <b>P</b>(rocess) <b>M</b>(anager) <b>2</b><br/>
@@ -10,20 +21,16 @@
 <br/><br/>
 
 
-<a title="PM2 Downloads">
+<a title="PM2 Downloads" href="https://npm-stat.com/charts.html?package=pm2&from=2018-01-01&to=2023-08-01">
   <img src="https://img.shields.io/npm/dm/pm2" alt="Downloads per Month"/>
 </a>
 
-<a title="PM2 Downloads">
+<a title="PM2 Downloads" href="https://npm-stat.com/charts.html?package=pm2&from=2018-01-01&to=2023-08-01">
   <img src="https://img.shields.io/npm/dy/pm2" alt="Downloads per Year"/>
 </a>
 
 <a href="https://badge.fury.io/js/pm2" title="NPM Version Badge">
    <img src="https://badge.fury.io/js/pm2.svg" alt="npm version">
-</a>
-
-<a href="https://travis-ci.com/github/Unitech/pm2" title="PM2 Tests">
-  <img src="https://travis-ci.com/Unitech/pm2.svg?branch=master" alt="Build Status"/>
 </a>
 
 <br/>
@@ -40,7 +47,7 @@ Starting an application in production mode is as easy as:
 $ pm2 start app.js
 ```
 
-PM2 is constantly assailed by [more than 1800 tests](https://app.travis-ci.com/github/Unitech/pm2/branches).
+PM2 is constantly assailed by [more than 1800 tests](https://github.com/Unitech/pm2/actions/workflows/node.js.yml).
 
 Official website: [https://pm2.keymetrics.io/](https://pm2.keymetrics.io/)
 
@@ -55,7 +62,7 @@ With NPM:
 $ npm install pm2 -g
 ```
 
-You can install Node.js easily with [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) or [ASDF](https://blog.natterstefan.me/how-to-use-multiple-node-version-with-asdf).
+You can install Node.js easily with [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) or [FNM](https://github.com/Schniz/fnm).
 
 ### Start an application
 

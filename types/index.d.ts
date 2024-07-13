@@ -306,9 +306,17 @@ interface Pm2Env {
 
 export interface StartOptions {
   /**
+   * Enable or disable auto start after process added (default: true).
+   */
+  autostart?: boolean;
+  /**
    * Enable or disable auto restart after process failure (default: true).
    */
   autorestart?: boolean;
+  /**
+   * List of exit codes that should allow the process to stop (skip autorestart).
+   */
+  stop_exit_codes?: number[];
   /**
    * An arbitrary name that can be used to interact with (e.g. restart) the process
    * later in other commands. Defaults to the script name without its extension
@@ -430,11 +438,19 @@ export interface StartOptions {
    * The environment variables to pass on to the process.
    */
   env?: { [key: string]: string; };
+  /**
+   * NameSpace for the process
+   * @default 'default'
+   * @example 'production'
+   * @example 'development'
+   * @example 'staging'
+   */
+  namespace?: string;
 }
 
 interface ReloadOptions {
   /**
-   * (Default: false) If true is passed in, pm2 will reload it’s environment from process.env 
+   * (Default: false) If true is passed in, pm2 will reload it’s environment from process.env
    * before reloading your process.
    */
   updateEnv?: boolean;

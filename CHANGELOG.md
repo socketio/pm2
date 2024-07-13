@@ -1,4 +1,24 @@
 
+## 5.4.1
+
+- @pm2/io DeprecationWarning: The util._extend API is deprecated https://github.com/keymetrics/pm2-io-apm/issues/301 @egoroof
+
+## 5.4.0
+
+- #5782 add autostart true||false feature by @ultimate-tester
+- fix UUID deprecation
+- updates modules
+
+## 5.3.1
+
+- #5686 Switch from Travis CI to Github Actions
+- #5680 Fixed reserved keyword for ES6 Strict Mode when Bundling @juaneth
+- #5683 update badges
+- #5684 auto switch light and dark mode logos
+- #5678 Bugfix/deploy ecosystem filename extension / esm module default ecosystem config name @TeleMediaCC
+- #5660 Fix matching logic for logs from namespace when lines = 0 @bawjensen
+- fix "vulnerabilities" in axios module
+
 ## 5.3.0
 
 - fix: replace non-working condition that blocks flush from clearing the logs #5533 @Sailboat265
