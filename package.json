@@ -1,5 +1,5 @@
 {
-  "name": "pm2",
+  "name": "@socket.io/pm2",
   "preferGlobal": true,
   "version": "7.0.3",
   "engines": {
@@ -125,6 +125,8 @@
     "@pm2/blessed": "0.1.81",
     "@pm2/js-api": "0.8.1",
     "@pm2/pm2-version-check": "1.0.4",
+    "@socket.io/cluster-adapter": "^0.3.0",
+    "@socket.io/sticky": "^2.0.1",
     "amp": "0.3.1",
     "amp-message": "0.1.2",
     "ansis": "4.0.0-node10",
@@ -158,7 +160,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Unitech/pm2.git"
+    "url": "git+https://github.com/socketio/pm2.git"
   },
   "license": "AGPL-3.0"
 }

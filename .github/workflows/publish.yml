@@ -1,0 +1,30 @@
+# trusted publishing: https://docs.npmjs.com/trusted-publishers#for-github-actions
+# staged publishing: https://docs.npmjs.com/staged-publishing
+
+name: Publish
+
+on:
+  push:
+    tags:
+      # expected format: <package>@<version> (example: socket.io@1.2.3)
+      - '**@*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Use Node.js 26
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Publish package
+        run: npm stage publish --access public
